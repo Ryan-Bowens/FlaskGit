@@ -5,16 +5,18 @@ app = Flask(__name__)
 def hello_world():
     return 'Use /play'
 
+# def play():
+#     return render_template('index.html', times=3)
+
+# def playX(x):
+#     return render_template('index.html', times=x)
+
 @app.route('/play')
-def play():
-    return render_template('index.html', times=3)
-
 @app.route('/play/<int:x>')
-def playX(x):
-    return render_template('index.html', times=x)
-
+@app.route('/play/<color>')
+@app.route('/play/<color>/<int:x>')
 @app.route('/play/<int:x>/<color>')
-def playXcolor(x, color):
+def playXcolor(x=3, color='blue'):
     return render_template('index.html', times=x, color=color)
 
 

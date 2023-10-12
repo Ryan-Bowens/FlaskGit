@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User New</title>
+</head>
+
+<body>
+    <form action="/user/create" method="post">
+        <h1>Add User</h1>
+        <p>First Name: {{first_name}}
+            <input type='text' name="first_name">
+        </p>
+        <p>Last Name: {{last_name}}
+            <input type='text' name="last_name">
+        </p>
+        <p>Email: {{email}}
+            <input type='text' name="email">
+        </p>
+        <a href="/users"><button id="Submit">Submit</button></a>
+    </form>
+    <a href="/users">List of all users</a>
+</body>
+
+</html>

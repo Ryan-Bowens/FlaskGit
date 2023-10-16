@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Show One</title>
+</head>
+<body>
+    <h1>{{dojos.name}} Ninjas</h1>
+    <p>First Name | Last Name | Age</p>
+    {% for ninjas in dojo_ninjas %}
+    <p>{{ninjas.first_name}} |
+        {{ninjas.last_name}} |
+        {{ninjas.age}}
+    </p>
+    {% endfor %}
+</body>
+</html>
+
+
+<!-- For help look at dojo_ninjas in Line 22... can I put it on seperate controller?
+look at model_ninjas Line 71 -->
